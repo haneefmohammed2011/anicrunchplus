@@ -5,12 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for Coming Soon page */
+        .coming-soon {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .coming-soon h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon p {
+            font-size: 24px;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .signup-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .signup-form h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .signup-form input[type="email"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+        }
+
+        .signup-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e50914; /* Netflix red */
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-form button:hover {
+            background-color: #d40812; /* Darker red on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="coming-soon">
         <h1>Coming Soon</h1>
-        <p>We're working hard to bring you this feature.</p>
+        <p>We're working hard to bring you this feature. Stay tuned!</p>
+        <div class="signup-form">
+            <h2>Sign up for Updates</h2>
+            <form action="submit-form.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
-
