@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Death Note - Streaming Service</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Page - Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Streaming Service</h1>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="browse.html">Browse</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Signup</a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="show-container">
+            <section class="video-section">
+                <div class="video-container">
+                    <video id="video" src="your-video-file.mp4" controls></video>
+                    <div class="controls">
+                        <button id="playPause">Play</button>
+                        <input type="range" id="progress" value="0" min="0" max="100">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                        <button id="volume">Mute</button>
+                        <button id="fullscreen">Fullscreen</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="show-description">
+                <h1>Show Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2>Episodes</h2>
+                <ul>
+                    <li><a href="#">Episode 1: Title</a></li>
+                    <li><a href="#">Episode 2: Title</a></li>
+                    <li><a href="#">Episode 3: Title</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Your Streaming Service</p>
+    </footer>
 
-  <section id="show-page">
-    <h1>Death Note</h1>
-    <p>Description: A high school student discovers a supernatural notebook that allows him to kill anyone by writing their name in it.</p>
-    <div class="video-container">
-      <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-        <source src="MY_VIDEO.mp4" type="video/mp4" />
-        <source src="MY_VIDEO.webm" type="video/webm" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
-      </video>
-      <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
-    </div>
-    <h2>Episodes</h2>
-    <ul>
-      <li>Episode 1: Rebirth</li>
-      <li>Episode 2: Confrontation</li>
-      <!-- Add more episodes here -->
-    </ul>
-  </section>
-
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
