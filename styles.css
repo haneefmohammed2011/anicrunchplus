@@ -1,202 +1,168 @@
-/* General Reset and Body Styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     background-color: #f5f5f5; /* Light gray background */
-    color: #000;
+    color: #333; /* Dark text color for contrast */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: #333; /* Dark background for the header */
 }
 
-nav ul {
-    list-style-type: none;
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: #ffffff; /* White text color for brand */
+}
+
+.nav-link {
+    color: #ffffff; /* White text color for nav links */
+}
+
+.nav-link:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(to right, #08082e 50%, #ffffff 50%); /* Split color design */
+    color: #333; /* Dark text color */
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-banner h1, .hero-banner p {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px;
-}
-
-/* Homepage Styles */
-.hero-banner {
-    background-color: #08082e;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
 }
 
 .hero-banner h1 {
-    font-size: 3em;
-    margin: 0;
-    animation: fadeIn 2s ease-in-out;
+    font-size: 3rem;
+    color: #000; /* Black text for the hero title */
 }
 
 .hero-banner p {
-    font-size: 1.5em;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #000; /* Black text for the hero subtitle */
 }
 
 /* Services Section */
 .services {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
+    background-color: #ffffff; /* White background */
+    padding: 2rem;
 }
 
 .services h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: #333; /* Dark text color */
 }
 
-.services .service {
-    margin-bottom: 20px;
-}
-
-.services .service h3 {
-    font-size: 1.5em;
-}
-
-.services .service p {
-    font-size: 1em;
+.service {
+    margin-bottom: 1.5rem;
 }
 
 /* About Me Section */
 .about-me {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
+    background-color: #ffffff; /* White background */
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .about-me h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: #333; /* Dark text color */
 }
 
-.about-me p {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-/* Show Page Styles */
+/* Show Page */
 .show-container {
-    max-width: 800px;
-    margin: auto;
+    background-color: #ffffff; /* White background */
+    padding: 2rem;
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    max-height: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 video {
     width: 100%;
-    display: block;
+    height: auto;
 }
 
 .controls {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    margin-top: 1rem;
 }
 
-button {
-    background: #ff5722; /* Orange buttons */
+#playPauseBtn, #volumeBtn {
+    background-color: #ff5722; /* Orange color */
     color: #fff;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
+    padding: 0.5rem 1rem;
 }
 
-button:hover {
-    background: #e64a19; /* Darker orange on hover */
+#progressBar {
+    flex-grow: 1;
+    margin: 0 1rem;
 }
 
-input[type="range"] {
-    flex: 1;
-    margin: 0 10px;
+/* Show Description */
+.show-description {
+    background-color: #ffffff; /* White background */
 }
 
-.show-description h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.show-description h1, .show-description h2 {
+    color: #333; /* Dark text color */
 }
 
-.show-description p {
-    font-size: 1em;
-    line-height: 1.5;
-    margin-bottom: 20px;
+a.text-primary {
+    color: #ff5722; /* Orange color for links */
 }
 
-.show-description h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.show-description ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.show-description ul li {
-    margin-bottom: 5px;
-}
-
-.show-description ul li a {
-    color: #ff5722; /* Orange links */
-    text-decoration: none;
-}
-
-.show-description ul li a:hover {
+a.text-primary:hover {
     text-decoration: underline;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    padding: 1rem;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        margin-right: 1rem;
     }
-    to {
-        opacity: 1;
+
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-banner p {
+        font-size: 1.2rem;
+    }
+
+    .services, .about-me, .show-container {
+        padding: 1rem;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    #progressBar {
+        margin: 0.5rem 0;
     }
 }
