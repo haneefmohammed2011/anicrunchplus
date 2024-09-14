@@ -20,17 +20,17 @@
             Your browser does not support HTML5 video.
         </video>
        <div class="overlay-content">
-    <h1>AniCrunch Plus</h1>
-    <p>Stream the best anime shows and movies.</p>
-    <a href="#" class="watch-now-button">Watch Now</a>
-  </div>
+            <h1>AniCrunch Plus</h1>
+            <p>Stream the best anime shows and movies.</p>
+            <a href="#" class="watch-now-button">Watch Now</a>
+        </div>
     </div>
 
     <section class="movies-section">
         <h2>Movies</h2>
         <div class="movie-container">
             <div class="movie">
-                <img src="" alt="Movie 1" class="movie-img">
+                <img src="movie-placeholder-1.jpg" alt="Movie 1" class="movie-img">
             </div>
             <div class="movie">
                 <img src="movie-placeholder-2.jpg" alt="Movie 2" class="movie-img">
@@ -44,8 +44,9 @@
     <section class="shows-section">
         <h2>Shows</h2>
         <div class="show-container">
+            <!-- Death Note Show Thumbnail with modal trigger -->
             <div class="show">
-                <img src="https://res.cloudinary.com/dhl8eost7/image/upload/c_thumb,w_200,g_face/v1726252299/Death_note_jk88l7.jpg">
+                <img src="https://res.cloudinary.com/dhl8eost7/image/upload/c_thumb,w_200,g_face/v1726252299/Death_note_jk88l7.jpg" alt="Death Note" class="show-img" id="deathNoteShow">
             </div>
             <div class="show">
                 <img src="show-placeholder-2.jpg" alt="Show 2" class="show-img">
@@ -56,8 +57,34 @@
         </div>
     </section>
 
+    <!-- Modal for Death Note Show -->
+    <div id="deathNoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Death Note</h2>
+            <video controls id="trailer-video">
+                <source src="https://res.cloudinary.com/dhl8eost7/video/upload/v1726251863/Death_Note___OFFICIAL_TRAILER_fuzmta.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <p>Watch all episodes of Death Note here.</p>
+            <div class="episodes-grid">
+                <div class="episode">
+                    <img src="episode1-thumbnail.jpg" alt="Episode 1">
+                    <p>Episode 1</p>
+                </div>
+                <div class="episode">
+                    <img src="episode2-thumbnail.jpg" alt="Episode 2">
+                    <p>Episode 2</p>
+                </div>
+                <!-- Add more episodes as needed -->
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 AniCrunch Plus</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
