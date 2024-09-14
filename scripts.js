@@ -1,18 +1,6 @@
-const deathNoteModal = document.getElementById("deathNoteModal");
-const closeModal = document.querySelector(".close");
-const showImage = document.querySelector(".show img");
+// Add JavaScript functionality here if needed
+// Example: Alert on page load
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Page loaded');
+});
 
-showImage.onclick = function() {
-  deathNoteModal.style.display = "flex"; // Show modal
-};
-
-closeModal.onclick = function() {
-  deathNoteModal.style.display = "none"; // Close modal
-};
-
-// Close the modal when clicking outside the modal content
-window.onclick = function(event) {
-  if (event.target == deathNoteModal) {
-    deathNoteModal.style.display = "none";
-  }
-};
