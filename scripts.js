@@ -1,21 +1,18 @@
-// Modal functionality for Death Note
 const deathNoteModal = document.getElementById("deathNoteModal");
-const deathNoteShow = document.getElementById("deathNoteShow");
-const closeModal = document.getElementsByClassName("close")[0];
+const closeModal = document.querySelector(".close");
+const showImage = document.querySelector(".show img");
 
-// When user clicks on Death Note thumbnail, show the modal
-deathNoteShow.onclick = function() {
-    deathNoteModal.style.display = "flex";
-}
+showImage.onclick = function() {
+  deathNoteModal.style.display = "flex"; // Show modal
+};
 
-// When the user clicks on the close button (x), close the modal
 closeModal.onclick = function() {
-    deathNoteModal.style.display = "none";
-}
+  deathNoteModal.style.display = "none"; // Close modal
+};
 
-// When the user clicks outside the modal content, close the modal
+// Close the modal when clicking outside the modal content
 window.onclick = function(event) {
-    if (event.target == deathNoteModal) {
-        deathNoteModal.style.display = "none";
-    }
-}
+  if (event.target == deathNoteModal) {
+    deathNoteModal.style.display = "none";
+  }
+};
