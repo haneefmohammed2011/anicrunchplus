@@ -58,24 +58,56 @@
     </section>
 
     <!-- Modal for Death Note Show -->
-    <div id="deathNoteModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Death Note</h2>
-            <video controls id="trailer-video">
-                <source src="https://res.cloudinary.com/dhl8eost7/video/upload/v1726251863/Death_Note___OFFICIAL_TRAILER_fuzmta.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <p>Watch all episodes of Death Note here.</p>
-            <div class="episodes-grid">
-                <div class="episode">
-                    <img src="episode1-thumbnail.jpg" alt="Episode 1">
-                    <p>Episode 1</p>
-                </div>
-                <div class="episode">
-                    <img src="episode2-thumbnail.jpg" alt="Episode 2">
-                    <p>Episode 2</p>
-                </div>
+   <div id="deathNoteModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <video id="trailer-video" controls>
+     <head>
+  <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="https://res.cloudinary.com/dhl8eost7/video/upload/v1726251863/Death_Note___OFFICIAL_TRAILER_fuzmta.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+</body>
+    </video>
+    <div class="episodes-grid">
+      <div class="episode">
+        <img src="episode1.jpg" alt="Episode 1">
+        <p>Episode 1</p>
+      </div>
+      <div class="episode">
+        <img src="episode2.jpg" alt="Episode 2">
+        <p>Episode 2</p>
+      </div>
+      <!-- Add more episodes as needed -->
+    </div>
+  </div>
+</div>
+
                 <!-- Add more episodes as needed -->
             </div>
         </div>
