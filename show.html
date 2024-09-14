@@ -1,55 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Page - Example</title>
+    <title>Show Page</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFMJp0I4x0jlvfYIlmI91k68Fbp4fTE6w9g9g" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">My Account</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Your Brand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    
+
+    <!-- Main Content -->
     <main>
-        <div class="show-container">
-            <section class="video-section">
-                <div class="video-container">
-                    <video id="video" src="your-video-file.mp4" controls></video>
-                    <div class="controls">
-                        <button id="playPause">Play</button>
-                        <input type="range" id="progress" value="0" min="0" max="100">
-                        <span id="currentTime">0:00</span>
-                        <span id="duration">0:00</span>
-                        <button id="volume">Mute</button>
-                        <button id="fullscreen">Fullscreen</button>
-                    </div>
+        <!-- Show Page Content -->
+        <section class="show-container container my-4">
+            <div class="video-container mb-4">
+                <video id="video-player" controls>
+                    <source src="example-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="controls">
+                    <button id="playPauseBtn" class="btn btn-primary">Play</button>
+                    <input type="range" id="progressBar" value="0" max="100" class="custom-range">
+                    <button id="volumeBtn" class="btn btn-secondary">Mute</button>
                 </div>
-            </section>
-            
-            <section class="show-description">
+            </div>
+            <div class="show-description">
                 <h1>Show Title</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>This is a description of the show. Learn more about the episodes and content here.</p>
                 <h2>Episodes</h2>
-                <ul>
-                    <li><a href="#">Episode 1: Title</a></li>
-                    <li><a href="#">Episode 2: Title</a></li>
-                    <li><a href="#">Episode 3: Title</a></li>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-primary">Episode 1: The Beginning</a></li>
+                    <li><a href="#" class="text-primary">Episode 2: The Journey</a></li>
+                    <li><a href="#" class="text-primary">Episode 3: The Conclusion</a></li>
                 </ul>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
-    
-    <footer>
-        <p>&copy; 2024 Your Streaming Service</p>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Your Brand. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-PTL7+bi44cEaiTDcDrY6mLtrAXI9Bq1IXoqQbyDOewEqzVPzvZKHdqDpjR/yQn6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgD87zFhWzl1puJFN25qvlfmTcrs1l8IJCF0lKQG1dqEdIbGHxk" crossorigin="anonymous"></script>
+
+    <!-- Deliver.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/deliver@1.0.0/dist/deliver.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
 </body>
 </html>
+
