@@ -1,125 +1,209 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
+/* General Styles */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Menu */
-header {
     background-color: #1c1c1c;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: white;
 }
 
-.logo {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Hero Banner */
-.hero-banner {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-}
-
-#hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+header .menu {
+    background-color: #08082e;
+    padding: 15px;
     text-align: center;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
+header .logo {
+    color: white;
     font-size: 24px;
+}
+
+/* Hero Banner Section */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
     margin-bottom: 20px;
 }
 
-.btn-watch-now {
-    background-color: orange;
-    color: #fff;
+.hero-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-banner .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-banner .overlay-content h1 {
+    font-size: 3em;
+    color: white;
+}
+
+.hero-banner .overlay-content p {
+    font-size: 1.5em;
+}
+
+.watch-now-button {
     padding: 10px 20px;
-    font-size: 18px;
-    border: none;
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.btn-watch-now:hover {
-    background-color: darkorange;
-}
-
-/* Sections */
+/* Movies & Shows Sections */
 .movies-section, .shows-section {
-    padding: 40px;
+    padding: 20px;
 }
 
-.movies-section h2, .shows-section h2 {
-    font-size: 32px;
+h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .movie-container, .show-container {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .movie, .show {
-    width: 200px;
-    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
 }
 
-.movie img, .show img {
-    width: 100%;
+.movie-img, .show-img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
 }
 
-.movie img:hover, .show img:hover {
+.movie-img:hover, .show-img:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-    background-color: #1c1c1c;
-    padding: 10px 0;
-    text-align: center;
-    color: #aaa;
-    margin-top: 40px;
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
+.modal-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#trailer-video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.episode {
+    text-align: center;
+}
+
+.episode img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Coming Soon Page Styles */
+.coming-soon-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #08082e;
+    text-align: center;
+}
+
+.coming-soon-container h1 {
+    color: #fff;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.coming-soon-container p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.countdown div {
+    margin: 0 20px;
+    text-align: center;
+    color: white;
+}
+
+.countdown div p {
+    font-size: 2rem;
+}
+
+.countdown div span {
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e50914;
+}
