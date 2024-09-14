@@ -1,8 +1,8 @@
 /* General Reset and Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #000;
     margin: 0;
     padding: 0;
 }
@@ -85,7 +85,7 @@ main {
 
 /* About Me Section */
 .about-me {
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #000;
     padding: 20px;
 }
@@ -129,7 +129,7 @@ video {
 }
 
 button {
-    background: #333;
+    background: #ff5722; /* Orange buttons */
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -138,7 +138,7 @@ button {
 }
 
 button:hover {
-    background: #555;
+    background: #e64a19; /* Darker orange on hover */
 }
 
 input[type="range"] {
@@ -172,7 +172,7 @@ input[type="range"] {
 }
 
 .show-description ul li a {
-    color: #ff5722;
+    color: #ff5722; /* Orange links */
     text-decoration: none;
 }
 
@@ -200,4 +200,3 @@ footer {
         opacity: 1;
     }
 }
-
