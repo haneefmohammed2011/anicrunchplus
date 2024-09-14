@@ -1,122 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse - AniCrunch Plus</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse - Streaming Service</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <h1 class="logo">AniCrunch Plus</h1>
-            <!-- Add more menu items if needed -->
-        </div>
-    </header>
+  <header>
+    <h1>Streaming Service</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+    </nav>
+  </header>
 
-    <div class="hero-banner">
-        <video autoplay muted loop id="hero-video">
-            <source src="https://res.cloudinary.com/dhl8eost7/video/upload/v1726251863/Death_Note___OFFICIAL_TRAILER_fuzmta.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-       <div class="overlay-content">
-            <h1>AniCrunch Plus</h1>
-            <p>Stream the best anime shows and movies.</p>
-            <a href="#" class="watch-now-button">Watch Now</a>
-        </div>
-    </div>
-
-    <section class="movies-section">
-        <h2>Movies</h2>
-        <div class="movie-container">
-            <div class="movie">
-                <img src="movie-placeholder-1.jpg" alt="Movie 1" class="movie-img">
-            </div>
-            <div class="movie">
-                <img src="movie-placeholder-2.jpg" alt="Movie 2" class="movie-img">
-            </div>
-            <div class="movie">
-                <img src="movie-placeholder-3.jpg" alt="Movie 3" class="movie-img">
-            </div>
-        </div>
-    </section>
-
-    <section class="shows-section">
-        <h2>Shows</h2>
-        <div class="show-container">
-            <!-- Death Note Show Thumbnail with modal trigger -->
-            <div class="show">
-                <img src="https://res.cloudinary.com/dhl8eost7/image/upload/c_thumb,w_200,g_face/v1726252299/Death_note_jk88l7.jpg" alt="Death Note" class="show-img" id="deathNoteShow">
-            </div>
-            <div class="show">
-                <img src="show-placeholder-2.jpg" alt="Show 2" class="show-img">
-            </div>
-            <div class="show">
-                <img src="show-placeholder-3.jpg" alt="Show 3" class="show-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for Death Note Show -->
-   <div id="deathNoteModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <video id="trailer-video" controls>
-     <head>
-  <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
-
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
-</head>
-
-<body>
-  <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="MY_VIDEO_POSTER.jpg"
-    data-setup="{}"
-  >
-    <source src="https://res.cloudinary.com/dhl8eost7/video/upload/v1726251863/Death_Note___OFFICIAL_TRAILER_fuzmta.mp4" type="video/mp4" />
-    <source src="MY_VIDEO.webm" type="video/webm" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-
-  <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
-</body>
-    </video>
-    <div class="episodes-grid">
-      <div class="episode">
-        <img src="episode1.jpg" alt="Episode 1">
-        <p>Episode 1</p>
+  <section id="browse">
+    <h1>Browse Content</h1>
+    <div class="section">
+      <h2>Shows</h2>
+      <div class="items">
+        <div class="item" onclick="location.href='show.html';">Death Note</div>
+        <!-- Add more items here -->
       </div>
-      <div class="episode">
-        <img src="episode2.jpg" alt="Episode 2">
-        <p>Episode 2</p>
+    </div>
+    <div class="section">
+      <h2>Movies</h2>
+      <div class="items">
+        <div class="item">Movie 1</div>
+        <div class="item">Movie 2</div>
       </div>
-      <!-- Add more episodes as needed -->
     </div>
-  </div>
-</div>
-
-                <!-- Add more episodes as needed -->
-            </div>
-        </div>
+    <div class="section">
+      <h2>Comedy</h2>
+      <div class="items">
+        <div class="item">Comedy 1</div>
+        <div class="item">Comedy 2</div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 AniCrunch Plus</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+
